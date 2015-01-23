@@ -1,0 +1,66 @@
+.btnLoginCls{
+	background: #A0D1FF 50% 50% repeat-x !important;
+	color: #FF0000 !important;
+	font-weight: bold;
+	border: 3px solid rgb(239, 255, 176) !important;
+	font-size: 90%;
+}
+
+.btnLoginCls hover{
+	border: 1px solid #d3d3d3;
+	background: #e6e6e6 url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
+	font-weight: normal;
+	color: #555555;
+}
+
+.txtLoginLabel{
+	background: rgb(63, 63, 63) !important;
+	color: white !important;
+	font-size: 80%;
+	border-radius: 2px;
+}
+
+.INtxtLoginLabel{
+	color: rgb(150, 0, 0) !important;
+	font-weight: bold;
+}
+
+.toolbar{
+	background: rgb(255, 92, 0) !important;	
+}
+
+.toolbarLabel{
+	/*color: rgb(199, 229, 255) !important;*/
+	font-size: 80% !important;
+}
+
+.bgPanel{
+	background: rgb(255, 92, 0) !important;
+	border: 3px solid rgb(239, 255, 176);
+}
+
+.textMedium{
+	font-size: 80%;
+	font-weight: bold;
+}
+
+.x-tabbar-dark.x-docked-top .x-tab-active {
+background-image: none;
+background-color: #0b3c5e;
+background-image: -webkit-linear-gradient(top, #FF811F,#FFFFFF 10%,#FFC09D 80%,#FF5200);
+background-image: -moz-linear-gradient(top, #FF811F,#FFFFFF 10%,#FFC09D 80%,#FF5200);
+background-image: -o-linear-gradient(top, #FF811F,#FFFFFF 10%,#FFC09D 80%,#FF5200);
+background-image: linear-gradient(top, #FF811F,#FFFFFF 10%,#FFC09D 80%,#FF5200);
+color: #F70000;
+}
+
+.x-tabbar.x-docked-top .x-tab {
+    padding: 0.4em 2em;
+    -webkit-border-radius: 0em;
+    border-radius: 0.3em;
+}
+
+.x-tabbar-dark .x-tab {
+color: #FFFFFF;
+border-bottom: 1px solid transparent;
+}
