@@ -6,9 +6,7 @@ Ext.define('bearside.view.Main', {
         'Ext.TitleBar',
         'Ext.Video',
 		'Ext.tab.Bar',
-		'Ext.Container',
-		'bearside.view.RegistraDatiAllenamento',
-		'bearside.controller.RegistraDatiAllenamento'
+		'Ext.Container'
     ],
 	
     config: {
@@ -41,10 +39,8 @@ Ext.define('bearside.view.Main', {
 			},
 			{
 				title: 'Registra',
-				layout: {
-					type: 'hbox',
-					pack: 'center'
-				},
+				layout: 'vbox',
+				flex: 1,
 				config: {
 					sezione: "registra"
 				}/*,
@@ -66,6 +62,7 @@ Ext.define('bearside.view.Main', {
 	listeners: {
 		initialize: function( th, eOpts ){
 			//Ext.Viewport.add(Ext.create('bearside.view.Login'));
+			th.getActiveItem().add(Ext.create('bearside.view.RegistraDatiAllenamento'));
 		},
 		
 		activeitemchange: function(th, newTab, oldTab, eOpts)  {			

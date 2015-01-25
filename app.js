@@ -10,15 +10,28 @@
     will need to resolve manually.
 */
 
+Ext.Loader.setConfig({
+  disableCaching: false,
+  enabled: true
+});
+
 Ext.application({
     name: 'bearside',
 
     requires: [
-        'Ext.MessageBox'
+        'Ext.MessageBox',
+		'Ext.form.FieldSet',
+		'Ext.field.Number',
+		'Ext.field.Select'
     ],
-
+	models: [],
+	stores: [],
+	controllers: [
+		'RegistraDatiAllenamento'
+	],
     views: [
-        'Main'
+        'Main',
+		'RegistraDatiAllenamento'
     ],
 
     icon: {

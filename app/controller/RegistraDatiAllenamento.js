@@ -3,43 +3,36 @@
 	
 	init: function () {
 		var me = this;
-			
-		var selContainer= '#'+ me.containerId+' ';
-				
+				ciccio = me;
 		me.callParent(arguments);
-								
-		me.addRef([				
-			{
-				ref: 'Container',
-				selector: selContainer+'#Container'
-			},
-			{
-				ref: 'FormRegistraDati',
-				selector: selContainer+'#FormRegistraDati'
-			},
-			{
-				ref: 'NomeScemo',
-				selector: selContainer+'#NomeScemo'
-			}
-		]);
-		
-		me.control(selContainer+'#NomeScemo', {
-			focus: me.onFocusNomeScemo
-		});
 	},
 	
-	onFocusNomeScemo: function(th){
-		console.log(th);
-		alert('th focus');
-	},
-    /*onNewNote: function () {
-        console.log("onNewNote");
-    },*/
-    launch: function () {
-        this.callParent();
-        console.log("launch");
+	config: {
+        refs: {
+			Container: '#Container',
+			FormRegistraDati: '#FormRegistraDati',
+            NomeScemo: '#NomeScemo',
+			MyButton: '#MyButton'
+        },
+        control: {
+            '#NomeScemo': {
+				'focus': 'onFocusNomeScemo'
+			},
+			'#MyButton': {
+				'tap': 'onMyButtonTap'
+			}
+        }
     },
 	
+	onMyButtonTap: function(button, e, eOpts) {
+		alert('tapped');
+    },
+	onFocusNomeScemo: function(th){
+		alert('th focus');
+	},
+    launch: function () {
+        this.callParent();
+    },
 	destroy : function(){
         this.callParent();
     }
