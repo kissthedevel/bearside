@@ -15,11 +15,8 @@
 			MyButton: '#MyButton'
         },
         control: {
-            '#NomeScemo': {
-				'focus': 'onFocusNomeScemo'
-			},
-			'#MyButton': {
-				'tap': 'onMyButtonTap'
+			'button#MyButton': {
+				tap: 'onMyButtonTap'
 			}
         }
     },
@@ -27,9 +24,6 @@
 	onMyButtonTap: function(button, e, eOpts) {
 		alert('tapped');
     },
-	onFocusNomeScemo: function(th){
-		alert('th focus');
-	},
     launch: function () {
         this.callParent();
     },

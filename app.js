@@ -22,7 +22,17 @@ Ext.application({
         'Ext.MessageBox',
 		'Ext.form.FieldSet',
 		'Ext.field.Number',
-		'Ext.field.Select'
+		'Ext.field.Select',
+		'Ext.Panel',
+		'Ext.form.Panel',
+		'Ext.field.Text',
+		'Ext.field.Password',
+		'Ext.field.Email',
+		'Ext.picker.Date',
+		'Ext.TitleBar',
+        'Ext.Video',
+		'Ext.tab.Bar',
+		'Ext.Container'
     ],
 	models: [],
 	stores: [],

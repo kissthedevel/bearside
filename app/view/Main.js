@@ -2,13 +2,6 @@ Ext.define('bearside.view.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'main',
 		
-    requires: [
-        'Ext.TitleBar',
-        'Ext.Video',
-		'Ext.tab.Bar',
-		'Ext.Container'
-    ],
-	
     config: {
 		tabBar: {
 			height: '40px',
@@ -40,7 +33,6 @@ Ext.define('bearside.view.Main', {
 			{
 				title: 'Registra',
 				layout: 'vbox',
-				flex: 1,
 				config: {
 					sezione: "registra"
 				}/*,

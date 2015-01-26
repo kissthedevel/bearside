@@ -1,15 +1,6 @@
 ﻿Ext.define("bearside.view.RegistraDatiAllenamento", {
     extend: 'Ext.Container',
 	
-	requires: [
-		'Ext.Panel',
-		'Ext.form.Panel',
-		'Ext.field.Text',
-		'Ext.field.Password',
-		'Ext.field.Email',
-		'Ext.picker.Date'
-    ],
-
     initialize: function() {
         this.callParent();
 		
@@ -17,22 +8,24 @@
 			{
 				xtype: 'container',
 				itemId: 'Container',
-				layout: {
-					type: 'hbox',
-					pack: 'center'
-				},
+				style: 'background:red',
 				flex: 1,
+				layout: {
+					pack: 'center',
+					type: 'hbox'
+				},
 				items: [
 					{
 						xtype: "formpanel",
-						layout: 'vbox',
+						// layout: 'vbox',
 						// flex: 1,
 						height: 450,
-						width: 400,
+						width: 200,
 						itemId: 'FormRegistraDati',
 						items: [
 							{
 								xtype: 'fieldset',
+								flex: 1,
 								title: 'Attività',
 								items: [
 									{
@@ -46,7 +39,8 @@
 										options: [
 											{text: 'Mountain Bike',  value: 'mtb'},
 											{text: 'Rulli', value: 'ind'},
-											{text: 'A piedi',  value: 'run'}
+											{text: 'A piedi',  value: 'run'},
+											{text: 'Sala pesi',  value: 'gym'}
 										]
 									}
 								]
@@ -54,7 +48,11 @@
 							{
 								xtype: 'container',
 								itemId: 'CntComputer',
-								layout: 'vbox',
+								flex: 1,
+								layout: {
+									type: 'vbox',
+									align: 'stretch'
+								},
 								items: [
 									{
 										xtype: 'fieldset',
@@ -127,7 +125,11 @@
 							{
 								xtype: 'container',
 								itemId: 'CntCardio',
-								layout: 'vbox',
+								flex: 1,
+								layout: {
+									type: 'vbox',
+									align: 'stretch'
+								},
 								items: [
 									{
 										xtype: 'fieldset',
@@ -158,6 +160,13 @@
 												showAnimation: 'slideIn'
 											}
 										]
+									},
+									{
+										xtype: 'button',
+										itemId: 'MyButton',
+										width: '80',
+										text: 'Submit',
+										ui: 'confirm'
 									}
 								]
 							}
