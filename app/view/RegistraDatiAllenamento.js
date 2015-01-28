@@ -8,24 +8,25 @@
 			{
 				xtype: 'container',
 				itemId: 'Container',
-				style: 'background:red',
-				flex: 1,
-				layout: {
-					pack: 'center',
-					type: 'hbox'
+				style: {
+					'background': '#009999',
+					'border-radius': '10px'
 				},
+				margin: 5,
+				height: '100%',
+				width: '100%',
+				layout: 'vbox',
 				items: [
 					{
 						xtype: "formpanel",
-						// layout: 'vbox',
-						// flex: 1,
-						height: 450,
-						width: 200,
+						margin: 8,
+						layout: 'vbox',
+						scrollable: 'vertical',
+						flex: 1,
 						itemId: 'FormRegistraDati',
 						items: [
 							{
 								xtype: 'fieldset',
-								flex: 1,
 								title: 'Attività',
 								items: [
 									{
@@ -48,7 +49,6 @@
 							{
 								xtype: 'container',
 								itemId: 'CntComputer',
-								flex: 1,
 								layout: {
 									type: 'vbox',
 									align: 'stretch'
@@ -125,7 +125,6 @@
 							{
 								xtype: 'container',
 								itemId: 'CntCardio',
-								flex: 1,
 								layout: {
 									type: 'vbox',
 									align: 'stretch'
@@ -162,12 +161,22 @@
 										]
 									},
 									{
-										xtype: 'button',
-										itemId: 'MyButton',
-										width: '80',
-										text: 'Submit',
-										ui: 'confirm'
-									}
+										xtype: 'container',
+										layout: {
+											type: 'hbox',
+											pack: 'center'
+										},
+										items: [
+											{
+												xtype: 'button',
+												itemId: 'MyButton',
+												width: '100',
+												text: 'Submit',
+												ui: 'confirm',
+												margin: 10
+											}
+										]
+									},
 								]
 							}
 						]

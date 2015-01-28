@@ -14,8 +14,7 @@ Ext.define('bearside.view.Main', {
 		layout: {
             type: 'card',
             animation: {
-                type: 'slide',
-                direction: 'left'
+                type: 'fade'
             }
         },
 		activeItem: 1,
@@ -32,10 +31,29 @@ Ext.define('bearside.view.Main', {
 			},
 			{
 				title: 'Registra',
-				layout: 'vbox',
+				layout: {
+					type: 'hbox'
+				},
 				config: {
 					sezione: "registra"
-				}/*,
+				},
+				items: [
+					{
+						xtype: 'spacer',
+						flex: 1
+					},
+					{
+						xtype: 'container',
+						itemId: 'ContainerRegistra',
+						layout: 'fit',
+						width: Ext.os.deviceType == 'Phone'  ?  '100%'	:	'40%'
+					},
+					{
+						xtype: 'spacer',
+						flex: 1
+					}
+				],
+				style: 'background: #242433'/*,
 				cls: 'btnLoginCls'
 				/*iconCls: 'user'/*,
 				html: 'Contact Screen'*/
@@ -54,7 +72,7 @@ Ext.define('bearside.view.Main', {
 	listeners: {
 		initialize: function( th, eOpts ){
 			//Ext.Viewport.add(Ext.create('bearside.view.Login'));
-			th.getActiveItem().add(Ext.create('bearside.view.RegistraDatiAllenamento'));
+			th.getActiveItem().down('container').add(Ext.create('bearside.view.RegistraDatiAllenamento'));
 		},
 		
 		activeitemchange: function(th, newTab, oldTab, eOpts)  {			
@@ -64,7 +82,7 @@ Ext.define('bearside.view.Main', {
 					break;
 					
 				case "registra":
-					newTab.add(Ext.create('bearside.view.RegistraDatiAllenamento'));
+					newTab.down('container').add(Ext.create('bearside.view.RegistraDatiAllenamento'));
 					// me.getTabRegistraDati().add(Ext.create('bearside.view.RegistraDatiAllenamento'));
 					break;
 					
